@@ -1,24 +1,26 @@
-import "./App.css";
-import Navigation from "./components/Navigation/Navigation";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/pages/Home/Home";
-import About from "./components/pages/About/About";
-import Services from "./components/pages/Services/Services";
-import Contact from "./components/pages/Contact/Contact";
-
-function App() {
+import React from "react";
+import Card1 from "./components/Card1";
+import Card2 from "./components/Card2";
+import Contact from "./components/Contact";
+import Grid1 from "./components/Grid1";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+const App = () => {
   return (
-    <BrowserRouter>
-      <Navigation></Navigation>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/services" element={<Services />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Navbar />
+      <Header />
+      <Card1 />
+      <br />
+      <Grid1 />
+      <br />
+      <br />
+
+      <Card2 />
+      <br />
+      <Contact />
+    </div>
   );
-}
+};
 
 export default App;
